@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.google.com/specimen/css?family=Roboto:400,700,400italic,700italic&subset=latin,vietnamese">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto", "Arial" sans-serif
+    font-family: 'Open Sans', sans-serif;
 }
 
 body,
@@ -42,15 +42,15 @@ html {
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card-2 w3-animate-top" id="myNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-wide">TEAM BANANAS</a>
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><b>TEAM BANANAS</b></a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small">
-                <a href="#intro" class="w3-bar-item w3-button">GIỚI THIỆU</a>
-                <a href="#benefit" class="w3-bar-item w3-button">LỢI ÍCH</a>
-                <a href="#solution" class="w3-bar-item w3-button">MÔ HÌNH LÀM VIỆC</a>
-                <a href="http://i.imgur.com/3RMjGnR.png" target="_blank" class="w3-bar-item w3-button">POSTER</a>
-                <a href="#demo" class="w3-bar-item w3-button">DEMO</a>
-                <a href="#team" class="w3-bar-item w3-button">TEAM</a>
+                <a href="#intro" class="w3-bar-item w3-button"><b>GIỚI THIỆU</b></a>
+                <a href="#benefit" class="w3-bar-item w3-button"><b>LỢI ÍCH</b></a>
+                <a href="#solution" class="w3-bar-item w3-button"><b>MÔ HÌNH LÀM VIỆC</b></a>
+                <a href="http://i.imgur.com/3RMjGnR.png" target="_blank" class="w3-bar-item w3-button"><b>POSTER</b></a>
+                <a href="#demo" class="w3-bar-item w3-button"><b>DEMO</b></a>
+                <a href="#team" class="w3-bar-item w3-button"><b>TEAM</b></a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
             <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -70,7 +70,7 @@ html {
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo">EASY MONEY</span>
+            <span class="w3-jumbo w3-wide">EzMONEY<sup><i>$</i></sup></span>
             <br>
             <span class="w3-large">ĐỀ TÀI TÌM VIỆC LÀM THỜI VỤ CHO SINH VIÊN</span>
             <p><a href="#intro" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start Now</a></p>
@@ -379,7 +379,7 @@ html {
     </footer>
     <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar ");
+    var mySidebar = document.getElementById("mySidebar");
 
     function w3_open() {
         if (mySidebar.style.display === 'block') {
