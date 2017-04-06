@@ -91,8 +91,8 @@ html {
             <div class="w3-third">
                 <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
                 <p class="w3-large"><b>Mục tiêu</b></p>
-                <p><b>Xây dựng một Web site là cầu nối giữa sinh viên và các nơi tuyển dụng</b></p>
                 <ul>
+                    <li style="text-align: left">Xây dựng một Web site là cầu nối giữa sinh viên và các nơi tuyển dụng</li>
                     <li style="text-align: left;">Quy mô tìm kiếm nhân sự của những nơi tuyển dụng được mở rộng trên Internet</li>
                     <li style="text-align: left;">Sinh viên có một nguồn thông tin để tìm kiếm dễ dàng các công việc thời vụ, đa dạng hơn.</li>
                     <li style="text-align: left">Đảm bảo độ tin cậy và điều kiện làm việc cho 2 bên.</li>
@@ -110,8 +110,8 @@ html {
     </div>
     <!-- Loi ich -->
     <div class="w3-container w3-light-grey w3-animate-top" style="padding:128px 16px" id="benefit">
+        <h2 class="w3-center w3-round-xxlarge w3-teal"><b>LỢI ÍCH</b></h2>
         <div class="w3-row-padding w3-center" style="margin-top:64px">
-            <h2 class="w3-center w3-round-xxlarge w3-teal"><b>LỢI ÍCH</b></h2>
             <div class="w3-half">
                 <i class="fa fa-user w3-margin-bottom w3-jumbo"></i>
                 <p class="w3-large"><b>Người làm việc</b></p>
@@ -282,8 +282,8 @@ html {
     </div>
     <!-- DEMO -->
     <div class="w3-container w3-light-grey w3-animate-top" style="padding:128px 16px" id="demo">
+        <h2 class="w3-center w3-round-xxlarge w3-teal">DEMO</h2>
         <div class="w3-row-padding w3-center" style="margin-top:64px">
-            <h2 class="w3-center w3-round-xxlarge w3-teal">DEMO</h2>
             <div class="w3-bar w3-center">
                 <button class="w3-bar w3-ripple w3-button tablink w3-red w3-mobile" onclick="openDemo(event,'Demo_Web')">Trang web chính</button>
                 <button class="w3-bar w3-ripple w3-button tablink w3-mobile" onclick="openDemo(event,'Demo2')">abc bla</button>
@@ -377,6 +377,7 @@ html {
             <a href="https://github.com/nmcntt2-cntn2016/project1-the-bananas " target="_blank "><i class="fa fa-github w3-hover-opacity "></i></a>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script>
     // Toggle between showing and hiding the sidebar when clicking the menu icon
     var mySidebar = document.getElementById("mySidebar");
@@ -388,7 +389,6 @@ html {
             mySidebar.style.display = 'block';
         }
     }
-
     // Close the sidebar with the close button
     function w3_close() {
         mySidebar.style.display = "none ";
@@ -399,30 +399,25 @@ html {
     var modal_3 = document.getElementById('id03');
     var modal_4 = document.getElementById('id04');
     var modal_7 = document.getElementById('id07');
-
-
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal_1) {
-            modal_1.style.display = "none ";
+            if (event.target == modal_1) {
+                modal_1.style.display = "none ";
+            }
+            if (event.target == modal_2) {
+                modal_2.style.display = "none ";
+            }
+            if (event.target == modal_3) {
+                modal_3.style.display = "none ";
+            }
+            if (event.target == modal_4) {
+                modal_4.style.display = "none ";
+            }
+            if (event.target == modal_7) {
+                modal_7.style.display = "none ";
+            }
         }
-        if (event.target == modal_2) {
-            modal_2.style.display = "none ";
-        }
-        if (event.target == modal_3) {
-            modal_3.style.display = "none ";
-        }
-        if (event.target == modal_4) {
-            modal_4.style.display = "none ";
-        }
-        if (event.target == modal_7) {
-            modal_7.style.display = "none ";
-        }
-    }
-
-
-    // Open demo
+        // Open demo
     function openDemo(evt, demoName) {
         var i;
         var x = document.getElementsByClassName("demo_img ");
@@ -436,6 +431,30 @@ html {
         document.getElementById(demoName).style.display = "block ";
         evt.currentTarget.className += " w3-red ";
     }
+    $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
     </script>
 </body>
 
